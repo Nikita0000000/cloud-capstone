@@ -8,6 +8,11 @@
       "minLength": 3,
       "minItems": 3
     },
+    "summary": {
+      "type": "string",
+      "minLength": 3,
+      "minItems": 3
+    },
     "dueDate": {
       "type": "string"
     },

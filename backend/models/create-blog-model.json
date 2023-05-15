@@ -7,12 +7,17 @@
       "type": "string",
       "minLength": 3
     },
+    "summary": {
+      "type": "string",
+      "minLength": 3
+    },
     "dueDate": {
       "type": "string"
     }
   },
   "required": [
     "name",
+    "summary",
     "dueDate"
   ],
   "additionalProperties": false
