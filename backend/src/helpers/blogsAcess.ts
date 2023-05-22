@@ -14,8 +14,8 @@ const logger = createLogger('BlogsAccess')
 export class BlogsAccess {
     constructor(
         private readonly documentClient: DocumentClient = new XAWS.DynamoDB.DocumentClient(),
-        private readonly createAtIndex:string = process.env.TODOS_CREATED_AT_INDEX,
-        private readonly blogTable: string = process.env.TODOS_TABLE
+        private readonly createAtIndex:string = process.env.BLOGS_CREATED_AT_INDEX,
+        private readonly blogTable: string = process.env.BLOGS_TABLE
     ){}
 
     async createBlog(newBlog:BlogItem): Promise<BlogItem> {
