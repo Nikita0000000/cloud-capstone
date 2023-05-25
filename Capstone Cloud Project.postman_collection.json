@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "3e766b76-de6e-4487-9e3c-77d36a01b268",
+		"name": "Capstone Cloud Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BLOGs",
+			"item": [
+				{
+					"name": "Get all blogs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Water flowers\",\n    \"summary\": \"Water flowers are beautiful\",\n\t\"dueDate\": \"2019-06-11\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update blog",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Change the world\",\n    \"summary\": \"The world has been changed to on with clean and renewable energy\",\n\t\"dueDate\": \"2019-12-11\",\n\t\"done\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs/3679961d-9cde-4a99-be61-3f23d87c86f9",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs",
+								"3679961d-9cde-4a99-be61-3f23d87c86f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs/e303800d-a584-41cd-b077-834aee57c7ce",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs",
+								"e303800d-a584-41cd-b077-834aee57c7ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs/3679961d-9cde-4a99-be61-3f23d87c86f9/attachment",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs",
+								"3679961d-9cde-4a99-be61-3f23d87c86f9",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiId",
+			"value": "j11tpumvi3",
+			"type": "string"
+		},
+		{
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImU1Xzg2a1FBeEVCQzc0WnVZRTNOSSJ9.eyJpc3MiOiJodHRwczovL2Rldi1tMDVoZDR3NDh3MzdsMGF5LnVzLmF1dGgwLmNvbS8iLCJhdWQiOiJvMENjNG55cGJFTG9hc2FRMXg4b2pWZGFpWlpGWnFwZSIsImlhdCI6MTY4NDc0NzIzNiwiZXhwIjoxNjg1Mzg3MjM2LCJzdWIiOiJhdXRoMHw2NDZiMzNkZmRhNDhkZmRkYjEzMmY3ZjkiLCJhdF9oYXNoIjoiVkgzQ2U3UzdHMjhTSGo1ZVNEelNXZyIsInNpZCI6ImxfRFFtdk5MbmZodk5yLWJHREcxNXFKbWFRckc1TW5GIiwibm9uY2UiOiJ1cncyR2lEQlYycm5SQlI4NWhSYXFGZ012QzRlZHM4fiJ9.gPkv5E6y3E7wH-Q9dIfm7JUmLOKvWknuwTx1slPMoqZHsAzYZyjyyisRlN2pnC-KpuTHln6HnjmOaMCmUcOl93lnghxksoGBkyjxIwlbHp_fkvITdQ2DSSWTkJVsesgh_mxIqPWNrzxvQh7hSHf9p0_S5ClhSDTxrQarsCtcfafi4I_PPLgdCeLVWyAhoO4tL5v8faM1UiuRWoNh8nmsU05YRmI0tzElUWmAU-ezEyXuc2cZwDURgblMX1ZZxAq1Mmb9JPoEsntbLV2aw5g_Rlp-lJh17nF9mMMUW-IU_L1jH3xuGX-mtmN5BN62pJezslagF_1LMciA805A73uaVg",
+			"type": "string"
+		}
+	]
+}
