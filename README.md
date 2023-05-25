@@ -1,6 +1,6 @@
 # Cloud Capstone Project
 
-This project is a serverless, using AWS Lambda and Serverless framework. Search for all comments starting with the `BLOG:` in the code to find the placeholders that you need to implement.
+This project is a serverless, using AWS Lambda and Serverless framework. THe project allows us to post `BLOG:` Title, Summary and an image. There also incude a check box to validate if you bare done with the blog and a gain the date the blog was created is available.
 
 # Functionality of the application
 
@@ -84,7 +84,7 @@ It receives a new BLOG item to be created in JSON format that looks like this:
 {
   "createdAt": "2019-07-27T20:01:45.424Z",
   "name": "About milk",
-  "summary": "Generative AI is a type of artificial intelligence that can create new content, such as text, images, audio, and video. It does this by learning patterns from existing data, then using this knowledge to generate new and unique outputs. Generative AI is capable of producing highly realistic and complex content that mimics human creativity, making it a valuable tool for many industries such as gaming, entertainment, and product design.",
+  "summary": "Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food. Immune factors and immune-modulating components in milk contribute to milk immunity. Early-lactation milk, which is called colostrum, contains antibodies that strengthen the immune system, and thus reduces the risk of many diseases. Milk contains many nutrients, including protein and lactose.",
   "dueDate": "2019-07-29T20:01:45.424Z",
   "done": false,
   "attachmentUrl": "http://example.com/image.png"
@@ -99,7 +99,7 @@ It should return a new BLOG item that looks like this:
     "blogId": "123",
     "createdAt": "2019-07-27T20:01:45.424Z",
     "name": "About milk",
-    "summary": "Generative AI is a type of artificial intelligence that can create new content, such as text, images, audio, and video. It does this by learning patterns from existing data, then using this knowledge to generate new and unique outputs. Generative AI is capable of producing highly realistic and complex content that mimics human creativity, making it a valuable tool for many industries such as gaming, entertainment, and product design.",
+    "summary": "Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food. Immune factors and immune-modulating components in milk contribute to milk immunity. Early-lactation milk, which is called colostrum, contains antibodies that strengthen the immune system, and thus reduces the risk of many diseases. Milk contains many nutrients, including protein and lactose.",
     "dueDate": "2019-07-29T20:01:45.424Z",
     "done": false,
     "attachmentUrl": "http://example.com/image.png"
@@ -134,7 +134,7 @@ It should return a JSON object that looks like this:
 
 ```json
 {
-  "uploadUrl": "https://s3-bucket-name.s3.eu-west-2.amazonaws.com/image.png"
+  "uploadUrl": "https://s3-bucket-name.s3.us-east-1.amazonaws.com/image.png"
 }
 ```
 
@@ -168,7 +168,7 @@ To implement authentication in your application, you would have to create an Aut
 
 # Best practices
 
-To complete this exercise, please follow the best practices from the 6th lesson of this course.
+We included logging information in the code to enable us trace issues or different execution steps of the backend.
 
 ## Logging
 
@@ -187,13 +187,13 @@ logger.info('User was authorized', {
 ```
 
 
-# Grading the submission
+# Application Hints
 
-Once you have finished developing your application, please set `apiId` and Auth0 parameters in the `config.ts` file in the `client` folder. A reviewer would start the React development server to run the frontend that should be configured to interact with your serverless application.
+I have set the `apiId` and Auth0 parameters in the `config.ts` file in the `client` folder. When you start the React development server to run the frontend it interacts with the serverless application.
 
 **IMPORTANT**
 
-*Please leave your application running until a submission is reviewed. If implemented correctly it will cost almost nothing when your application is idle.*
+*The application will be running until after submission is reviewed.*
 
 # Suggestions
 
@@ -288,7 +288,7 @@ Select a file to import:
 ![Alt text](images/import-collection-3.png?raw=true "Image 3")
 
 
-Right click on the imported collection to set variables for the collection:
+Click on the imported collection and select variables on the right side of the screen to set variables for the collection:
 
 ![Alt text](images/import-collection-4.png?raw=true "Image 4")
 
